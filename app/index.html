@@ -31,19 +31,38 @@
 
 <body>
 
-	<div class="container">
+	<!-- меню -->
+	<aside class="side">
 
-		<div class="row">
-
-			<div class="col-sm-8 col-sm-offset-2">
-				
-				<p>привет</p>
-
-			</div>
-			
+		<!-- гамбургер -->
+		<div class="hamburger" id="hamburger" title="Меню">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
 		</div>
 
-	</div>
+		<!-- контент меню -->
+		<div class="side-menu">
+			
+			<!-- профиль -->
+			<div class="user">
+				<div class="user__img"><img src="img/photo.jpg" alt="Кудёлко Андрей"></div>
+				<h2 class="user__name"><a href="https://vk.com/id252972675" target="_blank">Кудёло Андрей</a></h2>
+				<h4 class="user__post">Верстальщик, Front-end разработчик</h4>
+			</div>
+
+			<!-- меню -->
+			<nav>
+				<ul class="menu">
+					<li class="menu__item" title="Обо мне"><a href="#"><i class="pe-7s-user"></i>Обо мне</a></li>
+					<li class="menu__item" title="Портфолио"><a href="#"><i class="pe-7s-portfolio"></i>Портфолио</a></li>
+					<li class="menu__item" title="Контакты"><a href="#"><i class="pe-7s-compass"></i>Контакты</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+	</aside>
 	
 	<script src="js/scripts.min.js"></script>
 

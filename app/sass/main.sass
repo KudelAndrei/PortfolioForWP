@@ -36,10 +36,152 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+	background-color: $dark-color
+	color: #fff
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
+ul, li
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+
+/* фиксированная панель меню */
+.side
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 50px
+	background-color: #111
+	transition: width 0.4s ease-in-out
+	overflow-x: hidden
+	&.is-active
+		width: 300px
+		.user
+			opacity: 1
+		.menu
+			margin-top: 40px
+			.menu__item
+				>a 
+					padding: 8px 10px 8px 40px
+
+/* гамбургер */
+.hamburger 
+	cursor: pointer
+	padding: 2px
+	float: right
+	.line
+		width: 44px
+		height: 3px
+		border-radius: 5px
+		background-color: $accent-color
+		display: block
+		margin: 8px auto
+		transition: all 0.3s ease-in-out
+
+#hamburger
+  transition: all 0.3s ease-in-out
+
+#hamburger
+	&.is-active
+  	animation: smallbig 0.6s forwards
+
+@keyframes smallbig
+  0%, 100%
+    transform: scale(1)
+  50%
+    transform: scale(0)
+
+#hamburger.is-active .line:nth-child(1),
+#hamburger.is-active .line:nth-child(2),
+#hamburger.is-active .line:nth-child(3)
+  transition-delay: 0.2s
+
+#hamburger.is-active .line:nth-child(2)
+  opacity: 0
+
+#hamburger.is-active .line:nth-child(1)
+  transform: translateY(11px) rotate(45deg)
+
+#hamburger.is-active .line:nth-child(3)
+  transform: translateY(-11px) rotate(-45deg)
+/* конец гамбургера */
+
+
+/* контент меню */
+.side-menu
+	position: absolute
+	top: 50px
+	width: 100%
+	padding: 30px 0
+
+	/* профиль */
+	.user
+		text-align: center
+		white-space: nowrap
+		opacity: 0
+		transition: opacity 0.2s ease-in
+		.user__img
+			width: 130px
+			height: 130px
+			display: inline-block
+			border-radius: 50%
+			overflow: hidden
+			img
+				width: 100%
+		.user__name
+			margin-bottom: 0
+			>a 
+				color: #fff
+				font-size: 16px
+				text-decoration: none
+				&:hover
+					color: #eaeaea
+				&:focus
+					text-decoration: none
+					color: #fff
+		.user__post
+			font-size: 13px
+			letter-spacing: 1px
+			font-family: "RalewayLight", sans-serif
+			color: #828080
+			margin-top: 0
+	
+	/* меню */
+	.menu
+		position: relative
+		margin-top: -100px
+		transition: margin-top 0.4s ease-in-out
+		z-index: 4
+		.menu__item
+			border-bottom: 1px solid #212121
+			>a 
+				padding: 8px 10px 8px 10px
+				color: rgba(#fff, .7) 
+				text-decoration: none
+				font-family: "RalewayLight", sans-serif
+				display: block
+				transition: background-color, padding, 0.3s ease-in-out
+				white-space: nowrap
+				vertical-align: middle
+				background-color: #111
+				&:hover
+					background-color: $accent-color
+					color: #fff
+				i 
+					font-size: 30px
+					vertical-align: middle
+					margin-right: 15px
+			&:first-child
+				border-top: 1px solid #212121
+
+
+
+
+				
 @import "media" // Всегда в конце
