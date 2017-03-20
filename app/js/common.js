@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	//$(".gallery").css("min-height", $(document).height()*1.1);
-
 	/* плавный скрол */
 	$("body, .side").niceScroll({
 		horizrailenabled : false,
@@ -43,11 +41,7 @@ $(document).ready(function() {
 		wall.fitWidth();
 	});
 
-	$('.filter__item').clock(function(){
-		console.log('awd');
-	});
 	
-
 	$(".filter__item").click(function() {
 		$(".filter__item").removeClass("active");
 		var filter = $(this).addClass("active").data("filter");
@@ -58,6 +52,7 @@ $(document).ready(function() {
 		}, 400);
 	});
 
+	/* просмотр изображений */
 	$(".gallery .gallery__item").magnificPopup({
 		type : 'image',
 		gallery : {

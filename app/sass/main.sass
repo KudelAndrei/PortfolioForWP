@@ -184,7 +184,7 @@ ul, li
 	/* меню */
 	.menu
 		position: relative
-		margin-top: -100px
+		margin-top: -150px
 		transition: margin-top 0.4s ease-in-out
 		z-index: 4
 		.menu__item
@@ -209,6 +209,79 @@ ul, li
 			&:first-child
 				border-top: 1px solid #212121
 
+/* popup */
+.mfp-content 
+	width: 100%
+
+.mfp-container 
+	padding: 0
+
+img.mfp-img 
+	display: block
+	height: auto
+	max-height: none !important
+	padding: 0
+	max-width: 100%
+
+.mfp-figure button.mfp-close 
+	background-color: $accent-color
+	height: 50px
+	padding: 0
+	position: fixed
+	top: 15px
+	right: 20px
+	text-align: center
+	width: 50px
+
+/* magnific library opened */
+.mfp-zoom-out-cur .content 
+	left: -100%
+
+.mfp-figure 
+	background-color: transparent
+
+.mfp-figure::after 
+	bottom: 0
+	top: 0
+	background-color: #181818
+
+.mfp-bottom-bar 
+	margin-left: -20px
+
+button.mfp-arrow 
+	display: none
+
+/* overlay at start */
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.5s
+	transition-delay: 0.2s
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 1
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 1
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content 
+	left: 100%
+	transition: all .4s
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	left: 0
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	left: 100%
+	transition: all .5s
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-arrow 
+	display: none!important
+
 
 
 /* контеннт */
@@ -227,7 +300,7 @@ ul, li
 		display: block
 		overflow: hidden
 		width: 300px
-		min-height: 200px
+		min-height: 100px
 		img
 			max-width: 100%
 			display: block
