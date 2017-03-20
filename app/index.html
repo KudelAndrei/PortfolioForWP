@@ -24,7 +24,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	<style>body { opacity: 0; overflow-x: hidden; } </style>
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -69,19 +69,34 @@
 
 	</aside>
 
-	<section class="content gallery">
-		<a href="img/images/1.jpg" class="gallery__item"><img src="img/images/1.jpg" alt="Картинка 1"></a>
-		<a href="img/images/2.jpg" class="gallery__item"><img src="img/images/2.jpg" alt="Картинка 2"></a>
-		<a href="img/images/3.jpg" class="gallery__item"><img src="img/images/3.jpg" alt="Картинка 3"></a>
-		<a href="img/images/4.jpg" class="gallery__item"><img src="img/images/4.jpg" alt="Картинка 4"></a>
-		<a href="img/images/5.jpg" class="gallery__item"><img src="img/images/5.jpg" alt="Картинка 5"></a>
-		<a href="img/images/6.jpg" class="gallery__item"><img src="img/images/6.jpg" alt="Картинка 6"></a>
-		<a href="img/images/7.jpg" class="gallery__item"><img src="img/images/7.jpg" alt="Картинка 7"></a>
-		<a href="img/images/8.jpg" class="gallery__item"><img src="img/images/8.jpg" alt="Картинка 8"></a>
-		<a href="img/images/3.jpg" class="gallery__item"><img src="img/images/6.jpg" alt="Картинка 6"></a>
-		<a href="img/images/4.jpg" class="gallery__item"><img src="img/images/7.jpg" alt="Картинка 7"></a>
-		<a href="img/images/1.jpg" class="gallery__item"><img src="img/images/8.jpg" alt="Картинка 8"></a>
-	</section>
+	<div class="content gallery">
+		<a class="gallery__item sv" href="img/images/1.jpg"><img src="img/dummy.png" data-original="img/images/1.jpg" alt="Alt"></a>
+		<a class="gallery__item dr" href="img/images/2.jpg"><img src="img/dummy.png" data-original="img/images/2.jpg" alt="Alt"></a>
+		<a class="gallery__item sv" href="img/images/3.jpg"><img src="img/dummy.png" data-original="img/images/3.jpg" alt="Alt"></a>
+		<a class="gallery__item sv" href="img/images/4.jpg"><img src="img/dummy.png" data-original="img/images/4.jpg" alt="Alt"></a>
+		<a class="gallery__item dr" href="img/images/5.jpg"><img src="img/dummy.png" data-original="img/images/5.jpg" alt="Alt"></a>
+		<a class="gallery__item dr" href="img/images/6.jpg"><img src="img/dummy.png" data-original="img/images/6.jpg" alt="Alt"></a>
+		<a class="gallery__item dr" href="img/images/7.jpg"><img src="img/dummy.png" data-original="img/images/7.jpg" alt="Alt"></a>
+		<a class="gallery__item sv" href="img/images/8.jpg"><img src="img/dummy.png" data-original="img/images/8.jpg" alt="Alt"></a>
+		<a class="gallery__item " href="img/images/9.jpg"><img src="img/dummy.png" data-original="img/images/9.jpg" alt="Alt"></a>
+		<a class="gallery__item dr" href="img/images/10.jpg"><img src="img/dummy.png" data-original="img/images/10.jpg" alt="Alt"></a>
+		<a class="gallery__item sv" href="img/images/1.jpg"><img src="img/dummy.png" data-original="img/images/1.jpg" ></a>
+		<a class="gallery__item "  href="img/images/2.jpg"><img src="img/dummy.png" data-original="img/images/2.jpg" ></a>
+		<a class="gallery__item dr" href="img/images/3.jpg"><img src="img/dummy.png" data-original="img/images/3.jpg" ></a>
+		<a class="gallery__item sv" href="img/images/4.jpg"><img src="img/dummy.png" data-original="img/images/4.jpg" ></a>
+		<a class="gallery__item " href="img/images/5.jpg"><img src="img/dummy.png" data-original="img/images/5.jpg" ></a>
+		<a class="gallery__item dr" href="img/images/6.jpg"><img src="img/dummy.png" data-original="img/images/6.jpg" ></a>
+		<a class="gallery__item sv" href="img/images/7.jpg"><img src="img/dummy.png" data-original="img/images/7.jpg" ></a>
+		<a class="gallery__item sv" href="img/images/8.jpg"><img src="img/dummy.png" data-original="img/images/8.jpg" ></a>
+		<a class="gallery__item dr" href="img/images/9.jpg"><img src="img/dummy.png" data-original="img/images/9.jpg" ></a>
+		<a class="gallery__item sv" href="img/images/10.jpg"><img src="img/dummy.png" data-original="img/images/10.jpg" ></a>
+	</div>
+
+	<div class="gallery-filter">
+		<button class="filter__item active">Все</button>
+		<button class="filter__item" data-filter=".sv">Свадьбы</button>
+		<button class="filter__item" data-filter=".dr">Дни рождения</button>
+	</div>
 
 
 	<script src="js/scripts.min.js"></script>

@@ -94,6 +94,10 @@ ul, li
 			.menu__item
 				>a 
 					padding: 8px 10px 8px 40px
+					&:hover
+						padding-left: 46px
+		&+.content
+			left: 250px
 
 /* гамбургер */
 .hamburger 
@@ -211,20 +215,50 @@ ul, li
 .content
 	position: relative
 	height: 100%
-	margin: 0 0 60px 55px
+	margin: 5px 5px 55px 55px
 	left: 0
 	transition: 0.4s ease-in-out left
 
 /* галерея */
 .gallery
+	background-color: $dark-color
+	padding-left: 5px
 	.gallery__item
 		display: block
 		overflow: hidden
 		width: 300px
+		min-height: 200px
 		img
 			max-width: 100%
 			display: block
+			transition: transform 15s ease
+		&:hover
+			img 
+				transform: scale(4)
 
+
+/* фильтры */
+.gallery-filter
+	position: fixed
+	padding: 10px
+	bottom: 0
+	left: 0
+	background-color: $dark-color
+	width: 100%
+	text-align: right
+	.filter__item
+		background-color: $dark-color
+		z-index: 2
+		color: #fff
+		border: 1px solid $accent-color
+		border-radius: 20px
+		padding: 2px 20px
+		opacity: .7
+		transition: opacity, background-color, color, 0.2s ease-in-out
+		&.active, &:hover
+			background-color: $accent-color
+			color: #fff
+			opacity: 1
 
 				
 @import "media" // Всегда в конце
