@@ -308,7 +308,8 @@ button.mfp-arrow
 		&:hover
 			img 
 				transform: scale(4)
-
+		&:last-child
+			margin-bottom: 125px
 
 /* фильтры */
 .gallery-filter
@@ -435,6 +436,11 @@ button.mfp-arrow
 			color: lighten(#5b5b5b, 20%)
 			padding: 0 10px
 			line-height: 20px
+			border: 1px solid transparent
+			&:focus
+				border: 1px solid #ea9502
+			&:required:valid
+				border: 1px solid green
 		.contact-form__textarea
 			resize: none 
 			margin-bottom: 40px

@@ -77,30 +77,31 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-5">
 					<ul class="contact--left">
-						<li class="contact__item"><i class="pe-7s-browser"></i>Мой сайт: <a href="kudelandrei.github.io" target="_blank">kudelandrei.github.io</a></li>
+						<li class="contact__item"><i class="pe-7s-browser"></i>Мой сайт: <a href="https://kudelandrei.github.io/" target="_blank">kudelandrei.github.io</a></li>
 						<li class="contact__item"><i class="pe-7s-map-2"></i>Адрес: <a href="#">Беларусь, город Слуцк, ул Ленина</a></li>
 						<li class="contact__item"><i class="pe-7s-phone"></i>Телефон <a href="tel: +375297022268">+375 (29) 702-22-68</a></li>
 					</ul>
 				</div>
+
 				<div class="col-md-6 col-sm-7">
-					<div class="contact-form">
+					<div class="contact-form" id="callback">
 						<h3 class="contact-form__head">Оставить заявку</h3>
-						<label for="">
+						<label>
 							<span>Ваше имя: </span>
-							<input type="text" class="contact-form__input">
+							<input type="text" name="name" class="contact-form__input" required>
 						</label>
 
-						<label for="">
+						<label>
 							<span>Ваше E-mail: </span>
-							<input type="email" class="contact-form__input">
+							<input type="email" name="email" class="contact-form__input" required>
 						</label>
 
-						<label for="">
+						<label>
 							<span>Комментарий к запросу: </span>
-							<textarea class="contact-form__input contact-form__textarea"></textarea>
+							<textarea name="message" class="contact-form__input contact-form__textarea"></textarea>
 						</label>
 
-						<input type="submit" class="contact-form__submit">
+						<button type="submit" class="contact-form__submit">Отправить заявку</button>
 					</div>
 				</div>
 			</div>

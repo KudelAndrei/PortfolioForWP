@@ -64,6 +64,22 @@ $(document).ready(function() {
 		$("button.mfp-arrow").delay(1000).fadeIn();
 	});
 
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#callback").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				
+			}, 1000);
+		});
+		return false;
+	});
+
 
 });
 
